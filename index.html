@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+
+        <title>Making of Compiler</title>
+
+    </head>
+    <body>
+        <h2> LZM Template Engine  </h2>
+
+
+            <div class="container" style="height:300px">
+                 <textarea class="editor" style="height:300px; width:800px;"> 
+			        
+	<%      var posts = [{title:'My Title 01', description:'my description 01',link:'www.link1.com'},
+                     {title:'My Title 02', description:'my description 02',link:'www.link2.com'}];
+		lazy.foreach(posts, function(post){ %>
+       
+        <div class="col-md-4">
+          <h2>{{ post.title }}</h2>
+          <p>{{  post.description }} </p>
+          <a href="#{{ post.link }}">read</a>
+        </div>
+    
+    <% }); %>  
+
+		 </textarea>
+                 
+       		<div class="console" style="height:300px; width:800px;"> </div>
+            </div>
+  
+<div class="container">
+        <button type="button" class="btn btn-default btn-lg">
+		  <span class="glyphicon glyphicon-ok-circle"></span> Compile 
+	       </button>	
+</div>
+
+           
+  
+                     
+     
+
+    
+    </body>
+
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+    <script src="lzm.js"></script>
+
+
+</html>
